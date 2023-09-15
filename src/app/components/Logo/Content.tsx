@@ -1,6 +1,12 @@
-export const SideImageLogo = () => {
+import { FC } from "react"
+
+type PropType = {
+  className?: string
+}
+
+export const SideImageLogo: FC<PropType> = ({ className }) => {
   return (
-    <svg width="197" height="191" viewBox="0 0 197 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} width="197" height="191" viewBox="0 0 197 191" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M60.1012 1.41208C60.7299 1.14322 61.362 0.880734 61.9974 0.624695H135.418C136.053 0.880734 136.685 1.14322 137.314 1.41208H60.1012Z" fill="#FFC93E" />
       <path d="M45.3271 9.28589C45.7367 9.02046 46.1483 8.75799 46.5621 8.49851H150.853C151.267 8.75799 151.679 9.02046 152.088 9.28589H45.3271Z" fill="#FFC93E" />
       <path d="M34.7902 17.1597C35.0987 16.8954 35.4089 16.6329 35.7208 16.3723H161.694C162.006 16.6329 162.316 16.8954 162.625 17.1597H34.7902Z" fill="#FFC93E" />
@@ -30,27 +36,27 @@ export const SideImageLogo = () => {
   )
 }
 
-export const HeadingLogo = () => {
+export const HeadingLogo: FC<PropType> = ({ className }) => {
   return (
-    <svg width="65" height="68" viewBox="0 0 65 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M63.0311 32.8773C60.1341 22.4491 56.9479 12.1625 53.6193 1.86826" stroke="#FFC93E" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M43.6393 46.9413C36.6223 36.8978 28.046 28.1936 20.0961 18.9369" stroke="#FFC93E" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M30.4285 66.3598C21.2834 61.7456 11.3857 57.9994 1.23274 56.7087" stroke="#FFC93E" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <svg className={className} width="65" height="68" viewBox="0 0 65 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M63.0311 32.8773C60.1341 22.4491 56.9479 12.1625 53.6193 1.86826" stroke="#FFC93E" strokeWidth="2" strokeMiterlimit="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M43.6393 46.9413C36.6223 36.8978 28.046 28.1936 20.0961 18.9369" stroke="#FFC93E" strokeWidth="2" strokeMiterlimit="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M30.4285 66.3598C21.2834 61.7456 11.3857 57.9994 1.23274 56.7087" stroke="#FFC93E" strokeWidth="2" strokeMiterlimit="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
 }
 
-export const ScrollDownLogo = () => {
+export const ScrollDownLogo:FC<PropType> = ({className}) => {
   return (
-    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0.0316157 0.938778L8.31383 15.284L16.596 0.938778L15.5706 0.938777L8.31383 13.5079L1.05704 0.938777L0.0316157 0.938778Z" fill="#0A142F" />
       <path d="M2.26397 0.938778L8.31383 11.4174L14.3637 0.938777L2.26397 0.938778Z" fill="#0A142F" />
     </svg>
   )
 }
-export const HeroStarLogo = () => {
+export const HeroStarLogo: FC<PropType> = ({className}) => {
   return (
-    <svg width="125" height="124" viewBox="0 0 125 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} width="125" height="124" viewBox="0 0 125 124" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M34.1207 0.261045L67.3335 43.9947L110.997 10.6905L79.6676 55.7921L124.835 87.0275L72.2591 71.1682L56.5099 123.777L55.3462 68.8737L0.445516 70.1523L52.302 52.0796L34.1207 0.261045Z" fill="#FFC93E" />
     </svg>
   )
@@ -59,7 +65,16 @@ export const HeroStarLogo = () => {
 export const BackgroundElement = () => {
   return (
     <svg width="942" height="834" viewBox="0 0 942 834" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1.00012 194.291C109.72 204.968 342.615 196.68 367.765 73.7655C399.201 -79.8775 20.6482 28.4099 247.911 225.237C461.488 410.211 1499.49 310.722 541.323 833" stroke="#FFC93E" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 10" />
+      <path d="M1.00012 194.291C109.72 204.968 342.615 196.68 367.765 73.7655C399.201 -79.8775 20.6482 28.4099 247.911 225.237C461.488 410.211 1499.49 310.722 541.323 833" stroke="#FFC93E" strokeWidth="2" strokeLinecap="round" strokeDasharray="10 10" />
     </svg>
   )
-} 
+}
+
+export const ButtonIcon: FC<PropType> = ({ className }) => {
+  return (
+    <svg className={className} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fillRule="evenodd" clipRule="evenodd" d="M15.5001 1.125C15.5001 0.95924 15.4343 0.800269 15.3171 0.683058C15.1999 0.565848 15.0409 0.5 14.8751 0.5H7.37512C7.20936 0.5 7.05039 0.565848 6.93318 0.683058C6.81597 0.800269 6.75012 0.95924 6.75012 1.125C6.75012 1.29076 6.81597 1.44973 6.93318 1.56694C7.05039 1.68415 7.20936 1.75 7.37512 1.75H13.3664L0.682618 14.4325C0.624508 14.4906 0.578413 14.5596 0.546964 14.6355C0.515515 14.7114 0.499329 14.7928 0.499329 14.875C0.499329 14.9572 0.515515 15.0386 0.546964 15.1145C0.578413 15.1904 0.624508 15.2594 0.682618 15.3175C0.740728 15.3756 0.809715 15.4217 0.885639 15.4532C0.961563 15.4846 1.04294 15.5008 1.12512 15.5008C1.2073 15.5008 1.28867 15.4846 1.3646 15.4532C1.44052 15.4217 1.50951 15.3756 1.56762 15.3175L14.2501 2.63375V8.625C14.2501 8.79076 14.316 8.94973 14.4332 9.06694C14.5504 9.18415 14.7094 9.25 14.8751 9.25C15.0409 9.25 15.1999 9.18415 15.3171 9.06694C15.4343 8.94973 15.5001 8.79076 15.5001 8.625V1.125Z" fill="#0A142F" />
+    </svg>
+
+  )
+}

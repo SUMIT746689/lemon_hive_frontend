@@ -7,14 +7,14 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    colors: {
-      primary: '#FFC93E',
-      secondary: '#111D5E',
-      accent: '#2563EB',
-      gray: '#617187',
-      gray2: '#F9FAFB',
-      background: '#CDCDCD'
-    },
+    // colors: {
+    //   primary: '#FFC93E',
+    //   secondary: '#111D5E',
+    //   accent: '#2563EB',
+    //   gray: '#617187',
+    //   gray2: '#F9FAFB',
+    //   background: '#CDCDCD'
+    // },
     fontSize: {
       hero: '140px',
       heading_1: '48px',
@@ -28,8 +28,15 @@ const config: Config = {
     extend: {
       maxWidth: {
         '8xl': '1320px'
-
       },
+      colors: {
+        primary: '#FFC93E',
+        secondary: '#111D5E',
+        accent: '#2563EB',
+        gray: '#617187',
+        gray2: '#F9FAFB',
+        border_color: '#CDCDCD'  
+      }
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       //   'gradient-conic':

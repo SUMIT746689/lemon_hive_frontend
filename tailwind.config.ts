@@ -16,14 +16,14 @@ const config: Config = {
       background: '#CDCDCD'
     },
     fontSize: {
-      heading_1: '140px',
-      heading_2: '48px',
-      heading_3: '24px',
-      heading_4: '20px',
-      heading_5: '18px',
-      heading_6: '16px',
-      heading_7: '14px',
-      heading_8: '12px'
+      hero: '140px',
+      heading_1: '48px',
+      heading_2: '24px',
+      heading_3: '20px',
+      heading_4: '18px',
+      heading_5: '16px',
+      heading_6: '14px',
+      heading_7: '12px'
     },
     extend: {
       maxWidth: {

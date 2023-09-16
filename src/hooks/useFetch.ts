@@ -18,13 +18,7 @@ function useFetch({ method = "post", url, query }: { method?: "post", url: strin
         'content-type': 'application/json',
       };
       const requestBody = {
-        query: `query {
-          conferences {
-            id
-            name
-          }
-        }
-        `
+        query
       }
       const options = {
         method: method,

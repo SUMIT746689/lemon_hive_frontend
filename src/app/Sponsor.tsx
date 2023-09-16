@@ -1,5 +1,5 @@
 import { FC, ReactElement } from "react"
-import { Catalog, Circooles, Circooles2, Gofore, Layers, Quotient, Sisyphus2, Sysyphus } from "./components/Logo/Sponsor"
+import { Catalog, Circooles, Circooles2, Gofore, Layers, Quotient, Sisyphus2, Sysyphus } from "@/components/Logo/Sponsor"
 
 export default function Sponsor() {
 

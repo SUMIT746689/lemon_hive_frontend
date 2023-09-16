@@ -1,7 +1,7 @@
 import Image from "next/image"
-import { BackgroundElement, ButtonIcon, HeadingLogo, HeroStarLogo, ScrollDownLogo, SideImageLogo } from "./components/Logo/Content"
-import { ButtonWrapper } from "./components/Button/Button"
+import { BackgroundElement, ButtonIcon, HeadingLogo, HeroStarLogo, ScrollDownLogo, SideImageLogo } from "@/components/Logo/Content"
 import Link from "next/link"
+import { ButtonWrapper } from "@/components/Button/Button"
 
 export const Content = () => {
 

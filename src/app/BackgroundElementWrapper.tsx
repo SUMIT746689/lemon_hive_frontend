@@ -1,5 +1,5 @@
+import { Ornament } from "@/components/Logo/Hero.Background";
 import { FC, ReactElement } from "react";
-import { Ornament } from "./components/Logo/Hero.Background";
 
 export const BackgroundElementWrapper: FC<{ children: ReactElement }> = ({ children }) => {
 

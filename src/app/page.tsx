@@ -13,7 +13,7 @@ export default function Home() {
           <Content />
         </>
       </BackgroundElementWrapper>
-      <Conferences/>
+      <Conferences />
       <Sponsor />
     </main>
   )

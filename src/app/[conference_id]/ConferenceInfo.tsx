@@ -8,10 +8,12 @@ import SponsorsCards from "./SponsorsCards";
 
 type ConferenceInfoPropsT = {
   conference: {
-    organizer: any[],
-    speakers: any[],
-    schedules: any[],
-    sponsors: any[],
+    name: string;
+    slogan: string;
+    // organizer: any[];
+    // speakers: any[];
+    schedules: any[];
+    // sponsors: any[];
   } | undefined;
 }
 const ConferenceInfo: FC<ConferenceInfoPropsT> = ({ conference }) => {
@@ -20,21 +22,21 @@ const ConferenceInfo: FC<ConferenceInfoPropsT> = ({ conference }) => {
   const [activeInfo, setActiveInfo] = useState<ActiveInfoT>("organizer")
 
   const handleClick = (value: ActiveInfoT): void => {
-    setActiveInfo(()=>value);
+    setActiveInfo(() => value);
   }
-  console.log({ activeInfo })
-  return (
-    <div className="py-[52px] grid grid-cols-12 gap-12">
 
-      <section className="col-span-4">
+  return (
+    <div className=" py-10 sm:py-[52px] grid sm:grid-cols-12 gap-8 md:gap-12">
+
+      <section className=" sm:col-span-4">
         <Sidebar activeInfo={activeInfo} handleClick={handleClick} conference={conference} />
       </section>
 
-      <section className=" col-span-8">
-        { activeInfo === "organizer" && <OrganizerCards /> }
-        { activeInfo === "speakers" && <SpeakersCards />}
-        { activeInfo === "schedules" && <ScheduleCards /> }
-        { activeInfo === "sponsors" && <SponsorsCards /> }
+      <section className=" sm:col-span-8">
+        {activeInfo === "organizer" && <OrganizerCards />}
+        {activeInfo === "speakers" && <SpeakersCards />}
+        {activeInfo === "schedules" && <ScheduleCards datas={conference?.schedules || []} />}
+        {activeInfo === "sponsors" && <SponsorsCards />}
       </section>
     </div>
   )

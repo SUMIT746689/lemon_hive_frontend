@@ -1,5 +1,7 @@
+import fetchDatas from "@/util/fetchDatas";
+
 export async function getConferenceDatas(conference_id: string) {
-  console.log(conference_id);
+  // console.log(conference_id);
   // const query = `
   //   query {
   //     conference(id:"${conference_id}") {
@@ -37,20 +39,17 @@ export async function getConferenceDatas(conference_id: string) {
         slogan
         schedules {
           description
+          day
+           location {
+             name
+             about
+             city
+             address
+          }
         }
       }
     }`;
 
-  const jsonQuery = JSON.stringify({ query });
-  console.log(jsonQuery)
-
-  const res = await fetch(`https://api.react-finland.fi/graphql?`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ query }),
-    cache: 'no-cache'
-  })
-  return res.json()
+  const res = await fetchDatas(query);
+  return res;
 }

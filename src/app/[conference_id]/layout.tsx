@@ -15,8 +15,10 @@ export default function RootLayout({
   return (
     <>
       <Header />
-      <div className=" max-w-[1320px] w-full mx-auto ">
-        {children}
+      <div className=" px-6">
+        <div className=" max-w-[1320px] w-full mx-auto ">
+          {children}
+        </div>
       </div>
     </>
   )

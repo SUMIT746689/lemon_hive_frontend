@@ -17,6 +17,8 @@ const config: Config = {
     // },
     fontSize: {
       hero: '140px',
+      hero_2:'100px',
+      hero_3:'60px',
       heading_1: '48px',
       heading_2: '24px',
       heading_3: '20px',

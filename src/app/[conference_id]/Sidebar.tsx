@@ -3,30 +3,32 @@ import { FC } from "react"
 
 type SidebarPropsT = {
   conference: {
-    organizer: any[],
-    speakers: any[],
-    schedules: any[],
-    sponsors: any[],
+    name: string;
+    slogan: string;
+    // organizer: any[];
+    // speakers: any[];
+    schedules: any[];
+    // sponsors: any[];
   } | undefined;
   handleClick: (arg: "organizer" | "speakers" | "schedules" | "sponsors") => void;
   activeInfo: string;
 }
 
 export const Sidebar: FC<SidebarPropsT> = ({ handleClick, activeInfo }) => {
-  console.log({activeInfo: activeInfo == 'organizer'})
+  console.log({ activeInfo: activeInfo == 'organizer' })
   return (
-    <div className=" grid gap-8 ">
+    <div className=" grid gap-6 sm:gap-8 ">
       <div onClick={() => handleClick("organizer")}>
         <SideBarButtonWrapper isActive={activeInfo === "organizer"}> Organizer</SideBarButtonWrapper>
       </div>
       <div onClick={() => handleClick("speakers")}>
-        <SideBarButtonWrapper isActive ={ activeInfo === "speakers"}> Speakers</SideBarButtonWrapper>
+        <SideBarButtonWrapper isActive={activeInfo === "speakers"}> Speakers</SideBarButtonWrapper>
       </div>
       <div onClick={() => handleClick("schedules")}>
-        <SideBarButtonWrapper isActive = { activeInfo === "schedules"}> Schedule</SideBarButtonWrapper>
+        <SideBarButtonWrapper isActive={activeInfo === "schedules"}> Schedule</SideBarButtonWrapper>
       </div>
       <div onClick={() => handleClick("sponsors")}>
-        <SideBarButtonWrapper isActive = { activeInfo === "sponsors"}> Sponsors</SideBarButtonWrapper>
+        <SideBarButtonWrapper isActive={activeInfo === "sponsors"}> Sponsors</SideBarButtonWrapper>
       </div>
 
     </div>
@@ -35,9 +37,12 @@ export const Sidebar: FC<SidebarPropsT> = ({ handleClick, activeInfo }) => {
 
 const SideBarButtonWrapper = ({ children, isActive }: { children: string, isActive: boolean }) => {
   return (
-    <div style={isActive ? { boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.20)" } : {}} className={` ${isActive ? 'bg-primary  text-white' : ' border border-border_color'} rounded-lg cursor-pointer flex items-center p-2 text-center`} >
+    <div
+      style={isActive ? { boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.20)" } : {}}
+      className={` ${isActive ? 'bg-primary  text-white' : ' border border-border_color'} rounded-lg cursor-pointer flex items-center p-2 text-center`}
+    >
       <ConferenceSidebarLogo />
-      <span className="w-full text-heading_3 font-bold">
+      <span className="w-full text-heading_4 sm:text-heading_3 font-bold">
         {children}
       </span>
     </div>

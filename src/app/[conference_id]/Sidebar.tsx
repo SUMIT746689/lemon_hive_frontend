@@ -1,3 +1,4 @@
+import DragAndDrop from "@/components/DragAndDrop/DragAndDrop";
 import { ConferenceSidebarLogo } from "@/components/Logo/Conference.Sidebar"
 import { FC } from "react"
 
@@ -18,9 +19,32 @@ export const Sidebar: FC<SidebarPropsT> = ({ handleClick, activeInfo }) => {
   console.log({ activeInfo: activeInfo == 'organizer' })
   return (
     <div className=" grid gap-6 sm:gap-8 ">
-      <div onClick={() => handleClick("organizer")}>
+      <DragAndDrop
+        isActive={activeInfo}
+        handleClick={handleClick}
+        datas={[
+          {
+            id: "organizer",
+            value: <SideBarButtonWrapper isActive={activeInfo === "organizer"}> Organizer</SideBarButtonWrapper>
+          },
+          {
+            id: "speakers",
+            value: <SideBarButtonWrapper isActive={activeInfo === "speakers"}> Speakers</SideBarButtonWrapper>
+          },
+          {
+            id: "schedules",
+            value: <SideBarButtonWrapper isActive={activeInfo === "schedules"}> Schedule</SideBarButtonWrapper>
+          },
+          {
+            id: "sponsors",
+            value: <SideBarButtonWrapper isActive={activeInfo === "sponsors"}> Sponsors</SideBarButtonWrapper>
+          },
+
+        ]} />
+
+      {/* <div onClick={() => handleClick("organizer")}>
         <SideBarButtonWrapper isActive={activeInfo === "organizer"}> Organizer</SideBarButtonWrapper>
-      </div>
+      </div >
       <div onClick={() => handleClick("speakers")}>
         <SideBarButtonWrapper isActive={activeInfo === "speakers"}> Speakers</SideBarButtonWrapper>
       </div>
@@ -29,9 +53,9 @@ export const Sidebar: FC<SidebarPropsT> = ({ handleClick, activeInfo }) => {
       </div>
       <div onClick={() => handleClick("sponsors")}>
         <SideBarButtonWrapper isActive={activeInfo === "sponsors"}> Sponsors</SideBarButtonWrapper>
-      </div>
+      </div> */}
 
-    </div>
+    </div >
   )
 }
 

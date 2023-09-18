@@ -6,6 +6,7 @@ export default async function Conference(
     { params: { conference_id: string } }
 ) {
 
+
   const { error, data } = await getConferenceDatas(conference_id)
   return (
     <div className="py-12 sm:py-[100px] duration-150 ">

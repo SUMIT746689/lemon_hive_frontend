@@ -24,6 +24,7 @@ const ConferenceInfo: FC<ConferenceInfoPropsT> = ({ conference }) => {
   const handleClick = (value: ActiveInfoT): void => {
     setActiveInfo(() => value);
   }
+  console.log({activeInfo})
 
   return (
     <div className=" py-10 sm:py-[52px] ">

@@ -35,7 +35,7 @@ export const Sidebar: FC<SidebarPropsT> = ({ handleClick, activeInfo }) => {
   )
 }
 
-const SideBarButtonWrapper = ({ children, isActive }: { children: string, isActive: boolean }) => {
+export const SideBarButtonWrapper = ({ children, isActive }: { children: string, isActive: boolean }) => {
   return (
     <div
       style={isActive ? { boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.20)" } : {}}

@@ -15,7 +15,7 @@ const Locations: FC<LocationsPropsT> = ({ locations }) => {
     descriptions.push(<div><span className="capitalize">{key} : </span>{`${value}`}</div>)
   }
   return (
-    <div className=" text-heading_5 grid gap-2" >
+    <div className=" grid gap-2" >
       {descriptions}
     </div>
   )
@@ -25,7 +25,7 @@ const ScheduleCards: FC<SchedulePropsT> = ({ datas }) => {
   console.log({ datas });
 
   return (
-    <div className=" bg-gray2 p-10 rounded-lg grid gap-6">
+    <div className=" bg-gray2 p-5 md:p-10 rounded-lg grid gap-6">
       {
         datas?.map((data, index) => (
           <Fragment key={index}>

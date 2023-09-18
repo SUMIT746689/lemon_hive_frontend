@@ -42,13 +42,13 @@ export const ScheduleCardWrapper: FC<ScheduleCardWrapperT> = ({ titleLeft, title
     <div className=" flex gap-4 sm:gap-6 md:gap-10 p-4 bg-white rounded-lg">
       <section className=" flex w-full flex-col justify-start sm:justify-center gap-2 sm:pr-5">
 
-        <section className=" flex justify-between ">
-          <div className=" text-secondary text-heading_5 md:text-heading_3 font-bold">
+        <section className=" flex justify-between w-full gap-1 ">
+          <span className=" text-secondary text-heading_5 md:text-heading_3 font-bold">
             {titleLeft}
-          </div>
-          <div className=" text-heading_6">
+          </span>
+          <span className=" pt-1 text-heading_7 sm:text-heading_6">
             {titleRight}
-          </div>
+          </span>
         </section>
 
         <section className=" text-heading_7 sm:text-heading_6  md:text-heading_5 text-gray">
